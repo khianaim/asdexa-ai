@@ -30,6 +30,7 @@ body {
   overflow-x: hidden;
   background-color:#fefefe;
   font-family: 'Hero', sans-serif;
+  color:black;
 
   /* Smoother font rendering */
   -webkit-font-smoothing: antialiased;
@@ -39,10 +40,10 @@ body {
   scrollbar-width: none; 
   -ms-overflow-style: none; 
 }
+
 body::-webkit-scrollbar {
   display: none; 
 }
-
 
 
 /* Apply background + text color globally */
@@ -66,7 +67,7 @@ footer {
   width: 100vw;
   max-width: 100%;
   height: 85svh;
-  color: white;
+  color: black;
   padding: 2em;
   display: flex;
   flex-direction: column;

@@ -123,7 +123,7 @@ const DashboardView = ({ insights, isVisible = true }) => {
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-base font-light">
+                <CardTitle className="text-base font-light text-black">
                   Industry Growth
                 </CardTitle>
                 <TrendingUp className="h-6 w-6 text-muted-foreground" />
