@@ -26,7 +26,7 @@ Responsive UI: Sleek, mobile-friendly design crafted with Tailwind CSS and Shadc
 # Previews
 <img width="969" alt="image" src="https://github.com/user-attachments/assets/6b56aa2b-cff7-4f94-84c6-e3ad408dafaf" />
 
-![image](https://github.com/user-attachments/assets/0d0efc99-870e-4c4b-9145-dd890a94ef24)
+![Screenshot (196)](https://github.com/user-attachments/assets/5167a308-d331-4ad0-940f-34b0a7390583)
 
 ![Screenshot (195)](https://github.com/user-attachments/assets/54c44ef1-1c85-47c9-8257-aa1214348c16)
 
