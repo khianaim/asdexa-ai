@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
+import { FaPlayCircle } from "react-icons/fa";
+
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -89,12 +91,12 @@ const HeroSection = () => {
                 { number: "95%", label: "Success Rate" },
                 { number: "24/7", label: "AI Support" },
               ].map((stat, i) => (
- <motion.div
-      key={i}
-      className="text-left px-1 sm:px-3 py-2 relative" // add relative for after pseudo-element if needed
-      variants={itemVariants}
-      style={{ paddingTop: '0.5rem', paddingBottom: '0.5rem' }} // control vertical padding to shorten divider
-    >
+          <motion.div
+                      key={i}
+                      className="text-left px-1 sm:px-3 py-2 relative" 
+                      variants={itemVariants}
+                      style={{ paddingTop: '0.5rem', paddingBottom: '0.5rem' }} 
+                    >
                   <h3 className="text-xl sm:text-3xl font-light font-hero text-black/80">
                     {stat.number}
                   </h3>
@@ -107,21 +109,23 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Right Column */}
-        <motion.div
-  className="flex flex-col justify-center flex-1 min-w-[300px] lg:max-w-[36%]"
-  variants={itemVariants}
->
-  <p className="text-black font-light text-lg leading-relaxed max-w-xl text-start mb-6">
-    Asdexa is your personal interview ally — built to help you speak
-    with clarity, confidence, and control. Whether you're pivoting
-    careers or chasing your next big role, Asce gives you the
-    structure, feedback, and support to shine.
-  </p>
+          <motion.div
+              className="flex flex-col justify-center flex-1 min-w-[300px] lg:max-w-[36%]"
+              variants={itemVariants}
+            >
+            <p className="text-black font-light text-lg leading-relaxed max-w-xl text-start mb-6">
+            Asdexa helps you prep with clarity, confidence, and control.  
+            From AI-generated cover letters and resume building  
+            to weekly insights and mock interview simulations —  
+            everything’s designed to help you land your next role with ease.
+            </p>
 
-  <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start mt-10">
+  <div className="flex flex-row gap-4">
+    {/* Get Started Button */}
     <Button
       size="lg"
-      className="px-8 mt-10 rounded-full hover:scale-[1.03] transition-all duration-300"
+      className="px-8 rounded-full hover:scale-[1.03] transition-all duration-300"
       onClick={handleGetStarted}
     >
       <span className="animated-gradient-text font-bold text-lg">
@@ -129,29 +133,46 @@ const HeroSection = () => {
       </span>
     </Button>
 
-              <style jsx>{`
-                .animated-gradient-text {
-                  background: linear-gradient(270deg, #4f75f3, #eaaaeb, #f0e6ff);
-                  background-size: 600% 600%;
-                  -webkit-background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                  animation: gradientMove 8s ease infinite;
-                  display: inline-block;
-                }
+    {/* Watch How It Works Button with gradient border + hover scale */}
+    <div className="group p-[1.5px] rounded-full bg-gradient-to-r from-[#4f75f3] via-[#eaaaeb] to-[#f0e6ff] transition-transform duration-300 hover:scale-[1.03]">
+      <Button
+        size="lg"
+        variant="ghost"
+        className="bg-white text-black rounded-full px-6 flex items-center gap-2"
+        asChild
+      >
+        <Link href="/demo">
+          <FaPlayCircle className="text-lg" />
+          <span className="font-medium">Watch How It Works</span>
+        </Link>
+      </Button>
+    </div>
+  </div>
 
-                @keyframes gradientMove {
-                  0% {
-                    background-position: 0% 50%;
-                  }
-                  50% {
-                    background-position: 100% 50%;
-                  }
-                  100% {
-                    background-position: 0% 50%;
-                  }
-                }
-              `}</style>
-            </div>
+  {/* Gradient text animation for Get Started */}
+  <style jsx>{`
+    .animated-gradient-text {
+      background: linear-gradient(270deg, #4f75f3, #eaaaeb, #f0e6ff);
+      background-size: 600% 600%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 8s ease infinite;
+      display: inline-block;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  `}</style>
+</div>
           </motion.div>
         </div>
       </div>
