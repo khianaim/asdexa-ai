@@ -52,7 +52,7 @@ const HeroSection = () => {
   }, []);
 
   const handleGetStarted = () => {
-    window.location.href = "/dashboard";
+    window.location.href = "/sign-up";
   };
 
   return (
